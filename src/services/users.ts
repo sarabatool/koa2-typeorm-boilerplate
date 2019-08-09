@@ -14,6 +14,10 @@ export const addUser = async(user: IUserRequest) => {
       email: joi.string().required(),
       password: joi.string().required()
   });
+  const existingUsers = await repo.getByEmail(user.email);
+  if(existingUsers.length > 0) {
+        throw boom.badRequest("Email id already exists");
+  }
   const newUser = new Users();
   newUser.name = user.name;
   newUser.email = user.email;

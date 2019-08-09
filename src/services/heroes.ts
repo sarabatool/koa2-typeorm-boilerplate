@@ -34,17 +34,3 @@ export const deleteHero = async(id: number) => {
     }
     return repo.deleteHero(id);
 };
-
-// export const addHero = async(hero: IHeroRequest, id: number) => {
-//   await joi.validate(hero, {
-//       name: joi.string().required()
-//   });
-//   await joi.validate(id, joi.number().required());
-//   const heroTemp = await repo.getById(id);
-//   if (!heroTemp) {
-//       throw boom.badRequest("This hero does not exist");
-//   }
-//   const toSaveHero = new Heroes();
-//   toSaveHero.name = hero.name;
-//   return repo.save(toSaveHero);
-// };
