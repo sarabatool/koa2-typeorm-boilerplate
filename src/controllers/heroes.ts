@@ -9,7 +9,8 @@ export const getAll = async (ctx: Context, next: () => void) => {
 
 export const save = async (ctx: Context, next: () => void) => {
     const payload: IHeroRequest = ctx.request.body;
-    ctx.state.data = await service.addHero(payload);
+    const id: number = ctx.params.id;
+    ctx.state.data = await service.addHero(payload, id);
     await next();
 };
 
