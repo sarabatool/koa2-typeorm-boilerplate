@@ -36,6 +36,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/jsonwebtoken": "^8.3.3",
+    "bcryptjs": "^2.4.3",
     "boom": "7.3.0",
     "bunyan": "^1.8.12",
     "convict": "5.0.0",
@@ -57,6 +58,7 @@
     "typeorm": "0.3.0-alpha.23"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.2",
     "@types/boom": "7.2.1",
     "@types/bunyan": "^1.8.6",
     "@types/convict": "4.2.1",
